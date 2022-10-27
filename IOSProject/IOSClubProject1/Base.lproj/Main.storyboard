@@ -126,6 +126,14 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="GkH-RP-y2W">
+                                        <rect key="frame" x="133" y="245" width="53" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PasswordIMG" translatesAutoresizingMaskIntoConstraints="NO" id="ffW-be-CYr">
+                                        <rect key="frame" x="133" y="245" width="53" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                             </view>
@@ -151,6 +159,8 @@
                         <outlet property="LogInButton" destination="fAm-jz-YvJ" id="VVH-53-5WE"/>
                         <outlet property="SingUpButton" destination="2yG-1e-tnE" id="paz-Dh-Kod"/>
                         <outlet property="bottomSheetView" destination="RfA-I4-lTW" id="gHy-H3-bnI"/>
+                        <outlet property="correctImagePassword" destination="GkH-RP-y2W" id="tml-Vr-YL7"/>
+                        <outlet property="incorrectImagePassword" destination="ffW-be-CYr" id="mRs-94-XE7"/>
                         <outlet property="userEmailInput" destination="Lm7-LZ-P23" id="gUa-gR-d79"/>
                         <outlet property="userPasswordInput" destination="DFM-s8-GM5" id="rH9-a2-lG7"/>
                     </connections>
@@ -161,6 +171,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="512" height="512"/>
+        <image name="PasswordIMG" width="622" height="481"/>
         <image name="car_img_ios" width="1247" height="702"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

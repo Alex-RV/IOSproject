@@ -17,33 +17,45 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var userPasswordInput: UITextField!
     
+    @IBOutlet weak var correctImagePassword: UIImageView!
     
+    @IBOutlet weak var incorrectImagePassword: UIImageView!
     @IBOutlet weak var SingUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
-        
+        clearIcon()
         self.bottomSheetView.layer.cornerRadius = 50
         
     }
     
     @IBAction func LogIn(_ sender: Any){
+        clearIcon()
         if(userPasswordInput.text == "admin123" && userEmailInput.text == "admin"){
-            userEmailInput.text=""
-            userPasswordInput.text=""
+            correctImagePassword.alpha=1
         }
-        else{return}
-        passwordValidator(password: "password1")
+        else {
+            print(passwordValidator(password: userPasswordInput.text!))
+            clearInputs()
+            incorrectImagePassword.alpha=1
+            return
+        }
     }
     
+    func clearInputs(){
+        userEmailInput.text=""
+        userPasswordInput.text=""
+    }
+    func clearIcon(){
+        correctImagePassword.alpha=0
+        incorrectImagePassword.alpha=0
+    }
     
     @IBAction func didTapSignUp(_ sender: Any) {
         if(userEmailInput.text != " " && userEmailInput.text != ""){
 //            loginInfo[userEmailInput.text!] = userPasswordInput.text
-            userEmailInput.text=""
-            userPasswordInput.text=""
+            clearIcon()
+            clearInputs()
         }
         else{return}
     }
